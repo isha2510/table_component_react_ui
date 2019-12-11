@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './table.css'
 import Name from '../ButtonComponents/Name';
 import Id from '../ButtonComponents/Id';
-
+import data from '../MOCK_DATA';
 
 class TableExample extends Component {
     constructor(props) {
@@ -21,16 +21,16 @@ class TableExample extends Component {
     }
 
     componentDidMount() {
-        axios.get(`http://localhost:8080/demo/all`)
-            .then(res => {
-                console.log(res);
+        // axios.get(`http://localhost:8080/demo/all`)
+        //     .then(res => {
+        //         console.log(res);
                 this.setState({
-                    tableData: res.data,
+                    tableData: data,
                    
 
                 })
-            }
-            )
+            // }
+            // )
     }
 
     handleNameClick(key){
